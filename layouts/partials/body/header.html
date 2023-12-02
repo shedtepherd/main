@@ -1,0 +1,10 @@
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start body/header -->" | safeHTML -}}
+{{ end }}
+<header>
+    {{ partial "body/title.html" . }}
+    {{ partial "body/nav.html" . }}
+</header>
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- End body/header -->" | safeHTML -}}
+{{ end }}

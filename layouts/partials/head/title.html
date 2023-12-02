@@ -1,0 +1,11 @@
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start head/title -->" | safeHTML -}}
+{{ end }}
+{{- if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+{{- else -}}
+    <title>{{.Title}} - {{ .Site.Title }}</title>
+{{- end -}}
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- End head/title -->" | safeHTML -}}
+{{ end }}

@@ -1,0 +1,13 @@
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start body/nav -->" | safeHTML -}}
+{{ end }}
+<nav>
+    <ul>
+        {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+</nav>
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start body/nav -->" | safeHTML -}}
+{{ end }}

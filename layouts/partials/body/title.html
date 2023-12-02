@@ -1,0 +1,7 @@
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start body/title -->" | safeHTML -}}
+{{ end }} 
+<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- End body/title -->" | safeHTML -}}
+{{ end }}

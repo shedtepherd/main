@@ -1,0 +1,8 @@
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start head/feeds -->" | safeHTML -}}
+    {{- "<!-- RSS will go here -->" | safeHTML -}}
+    {{- "<!-- Atom will go here -->" | safeHTML -}}
+{{ end }}
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- End feeds -->" | safeHTML -}}
+{{ end }}
