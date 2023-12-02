@@ -1,6 +1,12 @@
-<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ .Site.Params.meta.description }}" />
-    <meta name="author" content="{{ .Site.Params.author.name }}" />
-    {{ hugo.Generator }}
-    <meta name="color-scheme" content="normal" />
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start head/meta -->" | safeHTML -}}
+{{ end }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ .Site.Params.meta.description }}">
+<meta name="author" content="{{ .Site.Params.author.name }}">
+{{ hugo.Generator }}
+<meta name="color-scheme" content="normal">
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- End head/meta -->" | safeHTML -}}
+{{ end }}

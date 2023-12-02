@@ -1,6 +1,13 @@
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start head/head -->" | safeHTML -}}
+{{ end }}
 <head>
-    <title>{{ .Site.Title }}</title>
+    {{ partial "head/title.html" . }}
     {{ partial "head/meta.html" . }}
     {{ partial "head/css.html" . }}
     {{ partial "head/favicon.html" . }}
+    {{ partial "head/feeds.html" . }}
 </head>
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- End head/head -->" | safeHTML -}}
+{{ end }}

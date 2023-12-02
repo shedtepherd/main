@@ -1,3 +1,14 @@
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- Start footer/footer -->" | safeHTML -}}
+{{ end }}
 <footer>
-    
+    <ul>
+        {{ range .Site.Menus.footer }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+        <li>{{ .Site.Copyright | safeHTML }}</li>
+    </ul>
 </footer>
+{{ if hugo.IsDevelopment }}
+    {{- "<!-- End footer/footer -->" | safeHTML -}}
+{{ end }}
